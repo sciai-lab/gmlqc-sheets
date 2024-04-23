@@ -1,2 +1,2 @@
 # gmlqc-sheets
-Sheets for the lecture Geometrich Machine Learning in Quantum Chemistry
+Sheets for the lecture Geometric Machine Learning in Quantum Chemistry
