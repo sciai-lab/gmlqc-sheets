@@ -1,20 +1,22 @@
 let
-  pkgs = import <nixos-unstable> {};
+  pkgs = import <nixos> {};
 in
   pkgs.mkShell {
     packages = [
       (pkgs.python3.withPackages (python-pkgs:
         with python-pkgs; [
-          numpy
+          # jupyter-collaboration
+          jupyter
+          jupytext
           matplotlib
+          numpy
+          pyscf
+          pytorch-lightning
+          rdkit
           scikit-image
           scikit-learn
-          jupyter
           torch
           torchvision
-          pytorch-lightning
-          # jupyter-collaboration
-          jupytext
         ]))
     ];
   }
