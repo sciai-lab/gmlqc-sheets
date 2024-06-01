@@ -16,6 +16,7 @@
       system: let
         pkgs = import nixpkgs {
           inherit system;
+          config.allowUnfree = true;
         };
       in rec {
         devShell = pkgs.mkShell {
@@ -32,7 +33,7 @@
                 rdkit
                 scikit-image
                 scikit-learn
-                torch
+                torchWithCuda
                 torchvision
               ]))
           ];
